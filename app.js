@@ -12,12 +12,7 @@ const supabaseClient = supabase.createClient(
 /***************************
  * PWA + NOTIFICATION
  ***************************/
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register("sw.js")
-    .then(() => console.log("✅ Service Worker aktif"))
-    .catch(err => console.error("❌ SW gagal", err));
-}
+
 
 async function requestNotificationPermission() {
   if (!("Notification" in window)) return;
@@ -568,4 +563,5 @@ async function initFCM() {
 }
 
 initFCM();
+
 
