@@ -556,6 +556,9 @@ async function initFCM() {
   });
 
   console.log("FCM TOKEN:", token);
+  console.log("Notification permission:", Notification.permission);
+console.log("FCM token:", token);
+
 
   await supabaseClient
     .from("fcm_tokens")
@@ -563,5 +566,6 @@ async function initFCM() {
 }
 
 initFCM();
+
 
 
